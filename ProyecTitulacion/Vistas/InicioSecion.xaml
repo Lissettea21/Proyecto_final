@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.InicioSecion">
+
+    <ContentPage.Content>
+        <ScrollView>
+            
+        
+        <Grid>
+            <Image Source="inicio1.jpg" Aspect="AspectFill" Opacity="0.3"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="logoIn.png" WidthRequest="200" HeightRequest="200" Margin="0,50,0,35" />
+                
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry x:Name="txtCorreo" Placeholder="Correo electronico" PlaceholderColor="White" FontAttributes="Bold" Keyboard="Email"/>
+                    <Entry x:Name="txtPassword" Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True" FontAttributes="Bold"/>
+                    <Button Text="Inicio de Sesion" Clicked="BtnInicio" BackgroundColor="White" BorderRadius="20" VerticalOptions="Center" HeightRequest="50"/>
+                    
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Recuperar su contraseña" FontAttributes="Bold"/>
+                        <Button Text="Registrar" Clicked="BtnRegistro"  HorizontalOptions="EndAndExpand" FontSize="10" FontAttributes="Bold"/>
+                    </StackLayout>
+                    
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
+                        <Label Text="Iniciar Sesion con " HorizontalOptions="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Grid.Row="0" Source="face.jpg" WidthRequest="45" HeightRequest="45"/>
+                                <ImageButton Clicked="ImageButton_Clicked" Grid.Row="0" Source="gmail.jpg" WidthRequest="45" HeightRequest="45"/>
+                                <ImageButton Source="QuienesS.jpg" Grid.Row="0" WidthRequest="45" HeightRequest="45" x:Name="btnFaceLogin" Clicked="btnFaceLogin_Clicked"/>
+                            </StackLayout>
+                            <Button IsVisible="false" Text="Google login" x:Name="btnGoogleLogin" HorizontalOptions="Center" VerticalOptions="Center" Clicked="btnGoogleLogin_Clicked"/>
+                        </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

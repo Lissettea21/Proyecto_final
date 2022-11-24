@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.Contactanos">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#F5FFFA">
+            <StackLayout Padding="20, 20, 20, 20" >
+                <Image Source="contacto.jpg" HeightRequest="200"/>
+
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Si desea saber mas de nuestros productos, o servicios, puede contactarse con los números telefónicos o a nuestras redes sociales." 
+                           FontSize="20" TextColor="Black" TextDecorations="None" VerticalOptions="StartAndExpand" FontAttributes="Italic"/>
+
+                    <Label Text="WhatsApp: 09867548792 " Grid.ColumnSpan="1" FontSize="20" TextColor="Black" VerticalOptions="Center"/>
+                    <Label Text="HORARIOS DE ATENCION" FontSize="25" TextColor="#2F4F4F"/>
+                    <Label Text="Apertura: 16:00" FontSize="20" TextColor="Black"/>
+                    <Label Text="Cierre: 22:00" FontSize="20" TextColor="Black"/>
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

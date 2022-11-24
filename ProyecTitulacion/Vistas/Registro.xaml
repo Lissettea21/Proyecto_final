@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.Registro" Title="Registro">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="inicio1.jpg" Aspect="AspectFill" Opacity="0.4"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ScrollView>
+                    <StackLayout Grid.Row="1" Padding="30,20" VerticalOptions="CenterAndExpand">
+                        <Label Margin="0,0,0,10" Text="Foto" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                        <Image x:Name="imgFoto" IsVisible="true" HeightRequest="200" Background="black" ></Image>
+                        <Button x:Name="btnFoto" Text="Pick" Clicked="btnFoto_Clicked" />
+                        <Entry x:Name="lblFirstName" FontAttributes="Bold" Keyboard="Text" IsVisible="false"/>
+                        <Entry x:Name="txtFirstName" Placeholder="Ingre su Nombre" PlaceholderColor="White" FontAttributes="Bold" Keyboard="Text"/>
+                        <Entry x:Name="lblLastName" FontAttributes="Bold" Keyboard="Text" IsVisible="false"/>
+                        <Entry x:Name="txtApellidoR" Placeholder="Ingrese aqui su Apellidos" PlaceholderColor="White" FontAttributes="Bold" Keyboard="Text"/>
+                        <Entry x:Name="lblEmail" FontAttributes="Bold" Keyboard="Text" IsVisible="false"/>
+                        <Entry x:Name="txtEmailR" Placeholder="Ingrese aqui su Email Email" PlaceholderColor="White" FontAttributes="Bold" Keyboard="Email"/>
+                        <Entry x:Name="txtPasswordR" Placeholder="Password" PlaceholderColor="White" IsPassword="True" FontAttributes="Bold"/>
+                        <Entry x:Name="txtConfirR" Placeholder="Confirmar Pasword" PlaceholderColor="White" IsPassword="True" FontAttributes="Bold"/>
+                        <Button x:Name="btnRegistrar" Text="Registrar" Clicked="BtnRegistrar" BackgroundColor="White" BorderRadius="20" VerticalOptions="Center" HeightRequest="50"/>
+                        <Button x:Name="btnActualizar"  Text="Actualizar" Clicked="BtnUpdateMember" BackgroundColor="White" BorderRadius="20" VerticalOptions="Center" HeightRequest="50" IsVisible="false"/>
+                    </StackLayout>
+                </ScrollView>
+                
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

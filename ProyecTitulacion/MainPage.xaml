@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.MainPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="fondo1.jpg" Aspect="AspectFill" Opacity="0.4"/>
+            <Grid>
+                <StackLayout>
+                    <Image Source="logo.jpg" HeightRequest="200"/>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Bienvenidos a las picaditas del guapo" FontSize="Medium" TextColor="Black" 
+                               FontAttributes="Italic" 
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalTextAlignment="Center"
+                               />
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*" />
+                                <RowDefinition />
+                                <RowDefinition Height="100" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <BoxView Color="Transparent" />
+                                <Button x:Name="btnMenu1" Text="Menu" Clicked="BtnIrMenu" BackgroundColor="White" 
+                                BorderRadius="30" VerticalOptions="CenterAndExpand" HeightRequest="40" 
+                                HorizontalOptions="CenterAndExpand"/>
+                            <BoxView Grid.Column="1"
+                             Color="Transparent"/>
+                                <Button Grid.Column="1" x:Name="btnCarritoCompra" Clicked="btnCarritoCompra_Clicked" Text="Carrito"  BackgroundColor="White" 
+                                        BorderRadius="30" VerticalOptions="CenterAndExpand" HeightRequest="40" 
+                                        HorizontalOptions="CenterAndExpand"/>
+                            <BoxView Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            Color="Transparent" />
+                            <Button x:Name="btnInicio" Text="Iniciar Sesión" Clicked="BtnInicio" BackgroundColor="White" 
+                            BorderRadius="30" VerticalOptions="CenterAndExpand" HeightRequest="40" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                                    />
+                        </Grid>
+                        <StackLayout  Orientation="Horizontal" Grid.RowSpan="4" Grid.ColumnSpan="2">
+
+
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+         
+    

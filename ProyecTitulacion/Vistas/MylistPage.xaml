@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyecTitulacion.Vistas.MylistPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="menu">
+    <ScrollView>
+    <StackLayout BackgroundColor="#F0FFF0">
+
+        <ActivityIndicator x:Name="indicador1" IsRunning="True" IsEnabled="False" IsVisible="False" Color="Aqua" BackgroundColor="Beige"/>
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="picaditas" Text="MENU PICADITAS" FontSize="20" TextColor="DarkBlue" 
+               HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        
+        <ListView x:Name="listaComida"   
+                  
+                  HasUnevenRows="True"
+                  ItemSelected="MenuListView_ItemSelected"
+                  ItemTapped="MenuListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                                <Image Grid.RowSpan="1" Source="{Binding ProductImage}"
+                                    HeightRequest="100" WidthRequest="100"/>
+
+                                <Label Grid.Column="1" Text="{Binding ProductName}" TextColor="Black" FontAttributes="25"/>
+
+                            <Label Grid.Row="1" Grid.Column="1"  Text="{Binding Description}" FontAttributes="15" TextColor="Black" />
+
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Cost}" FontAttributes="10" TextColor="Black"/>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="3" Grid.Row="1">
+                                <StackLayout>
+                                    
+                                </StackLayout>
+                                <Label Text="ELEGIR" 
+                                    BackgroundColor="Black"  WidthRequest="60" VerticalOptions="EndAndExpand"
+                                    HeightRequest="30" TextColor="white" FontSize="10"  HorizontalOptions="End"/>
+
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnAgregarC" Clicked="btnAgregarC_Clicked" Text="AGREGAR AL CARRITO" BackgroundColor="Black" 
+                    BorderColor="Black" WidthRequest="90" VerticalOptions="Center" HeightRequest="40"
+                    TextColor="white" FontSize="10"  BorderRadius="20" HorizontalOptions="End"/>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

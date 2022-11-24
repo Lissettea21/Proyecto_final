@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.Vistas.Carrito">
+    <StackLayout BackgroundColor="#F0FFF0">
+        <StackLayout Orientation="Vertical">
+            <Label x:Name="picaditas" Text="CARRITO" FontSize="20" TextColor="DarkBlue" 
+               HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <ActivityIndicator x:Name="indicador1" IsRunning="True" IsEnabled="False" IsVisible="False" Color="Aqua" BackgroundColor="Beige"/>
+
+        <ListView x:Name="carrito" HasUnevenRows="True"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.RowSpan="2" Source="{Binding ProductImage}"
+                                    HeightRequest="100" WidthRequest="100"/>
+
+                            <Label Grid.Column="1" Text="{Binding ProductName}" TextColor="Black" FontAttributes="25"/>
+
+                            <Label Grid.Row="1" Grid.Column="1"  Text="{Binding Description}" FontAttributes="15" TextColor="Black" />
+
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Cost}" FontAttributes="10" TextColor="Black"/>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="3" Grid.Row="1">
+                                
+
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Pedir" x:Name="btnPide" Clicked="btnPide_Clicked"
+                                    BackgroundColor="Green" BorderColor="Black"  WidthRequest="90" VerticalOptions="EndAndExpand"
+                                    HeightRequest="60" TextColor="white" FontSize="20"  BorderRadius="20" HorizontalOptions="End"/>
+
+    </StackLayout>
+</ContentPage>

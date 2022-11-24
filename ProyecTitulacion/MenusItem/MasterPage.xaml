@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.MasterPage">
+
+    <FlyoutPage.Flyout>
+        <ContentPage BackgroundColor="#FFFAF0" Title="nuemu picaditas">
+            <StackLayout>
+                <Label Text="Picaditas" FontAttributes="Bold" FontSize="25" BackgroundColor="White"/>
+                <StackLayout Orientation="Vertical">
+                    <ListView x:Name="listMenu">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Text="{Binding Titulo}" FontSize="20" TextColor="Black"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+</FlyoutPage>

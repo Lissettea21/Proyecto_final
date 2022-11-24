@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.QuienesS"
+             Title="Quienes Somos">
+
+    <ContentPage.Content>
+        <Grid Padding="20, 20, 20, 20" BackgroundColor="#F0FFF0">
+            <Grid>
+                <Image Source="QuienesS.jpg" WidthRequest="60" HeightRequest="40" Grid.Row="1"/>
+                <Grid>
+                    <Label Text="Las picaditas del guapo tiene la visión y misión enfocada a la excelencia en el servicio, con valores como la ética profesional y honradez que siempre nos ha caracterizado. Tenemos mas de 5 años de experiencia en la rama gastronomicas, conociendo siempre las necesidades de nuestros clientes. Brindamos productos de calidad, delisiosos y buscando así optimizar el valioso tiempo de nuestros distinguidos clientes." 
+                           TextColor="Black" FontSize="18" FontAttributes="Italic"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

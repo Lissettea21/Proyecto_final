@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyecTitulacion.Vistas.ListaMenu"
+             Title="Muenu Picaditas">
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <!--<Grid>-->
+            
+            <!--<Grid>-->
+            <StackLayout Orientation="Horizontal" BackgroundColor="Black">
+                <!--<Image Source="menuPicaditas.jpg" Aspect="AspectFill"/>-->
+                <Button Text="Ir al menu" Clicked="BtnIrMenu" BackgroundColor="White" 
+                            BorderRadius="10" 
+                           />
+                </StackLayout>
+
+            <!--</Grid>-->
+        <!--</Grid>-->
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
